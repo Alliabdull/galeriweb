@@ -4,8 +4,7 @@
     if($_SESSION['status_login'] != true){
         echo '<script>window.location="login.php"</script>';
     }
-    $query = mysqli_query($conn, "SELECT * FROM tb_admin WHERE admin_id
-    ='".$_SESSION['id']."'");
+    $query = mysqli_query($conn, "SELECT * FROM tb_admin WHERE admin_id ='".$_SESSION['id']."'");
     $d = mysqli_fetch_object($query);
 ?>
 
@@ -64,8 +63,7 @@
                             admin_telp        = '".$hp."',
                             admin_email       = '".$email."',
                             admin_addres      = '".$alamat."'
-                            WHERE admin_id    = '".$d->admin_id."',
-                            ");
+                            WHERE admin_id    = '".$d->admin_id."'");
                         if($update){
                             echo '<script>alert("Ubah data berhasil")</script>';
                             echo '<script>window.location="profil.php"</script>';
