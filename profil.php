@@ -63,7 +63,7 @@
                             username          = '".$user."',
                             admin_telp        = '".$hp."',
                             admin_email       = '".$email."',
-                            admin_address     = '".$alamat."',
+                            admin_addres      = '".$alamat."'
                             WHERE admin_id    = '".$d->admin_id."',
                             ");
                         if($update){
